@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-const useScroll = () => {
+const useScrollDropShadow = () => {
 	// Checks position of scrollbar
-	const [scrollState, setScrollState] = useState(0);
+	const [scrollDropShadowState, setScrollDropShadowState] = useState(0);
 
 	useEffect(() => {
 		const boxShadow = {
@@ -14,17 +14,17 @@ const useScroll = () => {
 		};
 
 		// Applies box-shadow when scrolling down
-		const handleScroll = () =>
-			setScrollState(
+		const handleScrollDropShadow = () =>
+			setScrollDropShadowState(
 				Math.floor(window.scrollY) === 0
 					? +boxShadowNone
 					: +boxShadow
 			);
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScrollDropShadow);
 	}, []);
 
-	return scrollState;
+	return scrollDropShadowState;
 };
 
-export default useScroll;
+export default useScrollDropShadow;
