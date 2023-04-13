@@ -1,5 +1,5 @@
 import Nav from '../Nav';
-import Footer from '../Footer';
+import Button from '../Button';
 
 export default function Layout() {
 	return (
@@ -12,7 +12,7 @@ export default function Layout() {
 			</section>
 			<section
 				id='projects'
-				className='min-h-screen bg-emerald-400'>
+				className='min-h-screen bg-violet-400'>
 				Projects
 			</section>
 			<section
@@ -22,10 +22,10 @@ export default function Layout() {
 			</section>
 			<section
 				id='contact'
-				className='min-h-screen bg-violet-400'>
+				className='min-h-screen bg-emerald-400'>
 				Contact
+				<Button text='Test' />
 			</section>
-			<Footer />
 		</>
 	);
 }
